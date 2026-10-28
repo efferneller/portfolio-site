@@ -1,3 +1,8 @@
+// iOS Safari enables the :active state when a touch listener is registered.
+document.querySelectorAll('.case-link').forEach((link) => {
+  link.addEventListener('touchstart', () => {}, { passive: true });
+});
+
 // Standard links preserve browser navigation, including direct links to cases.
 // Restore the project position when returning to the portfolio from a case.
 document.querySelectorAll('.case-back').forEach((link) => {
