@@ -6,12 +6,37 @@
   <meta name="description" content="Портфолио Эллады Ярмоновой, UX/UI-дизайнера. Киберспортивная платформа NEVA, Город цветов и Большой фестиваль спорта 2025.">
   <meta name="theme-color" content="#ffffff">
   <title>Ярмонова Эллада — UX/UI-дизайнер</title>
+  <script>
+    document.documentElement.classList.add("is-loading");
+    function pageScriptFailed() {
+      const showError = () => {
+        document.querySelector("[data-loader-status]").textContent = "Не удалось загрузить страницу. Попробуйте ещё раз.";
+        const retry = document.querySelector("[data-loader-retry]");
+        retry.hidden = false;
+        retry.onclick = () => location.reload();
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", showError, { once: true });
+      else showError();
+    }
+  </script>
+  <link rel="modulepreload" href="/src/page-loader.js">
   <link rel="preload" href="/static/fonts/CimeroPro-Monochrome.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/static/fonts/Raleway-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="/src/styles.css">
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.js" onerror="pageScriptFailed()"></script>
 </head>
 <body class="home-page">
+  <section class="page-loader" aria-label="Загрузка страницы" data-page-loader>
+    <div class="page-loader__content">
+      <p class="page-loader__title">Портфолио</p>
+      <div class="page-loader__meta">
+        <p class="page-loader__status" data-loader-status>Загружаем изображения</p>
+        <p class="page-loader__percent" data-loader-percent aria-hidden="true">0%</p>
+      </div>
+      <div class="page-loader__track" role="progressbar" aria-label="Загрузка изображений" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-loader-progress><span></span></div>
+      <button class="page-loader__retry" type="button" data-loader-retry hidden>Повторить</button>
+    </div>
+  </section>
   <main class="portfolio">
     <section class="hero" aria-labelledby="portfolio-title">
       <div class="hero-content">
