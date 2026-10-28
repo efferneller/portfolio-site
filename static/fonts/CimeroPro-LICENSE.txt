@@ -1,0 +1,10 @@
+Cimero Pro
+Designer: Ivan Filipov, neogrey creative
+
+Embedded font license:
+Free for personal & commercial usage. Donations are welcome
+
+Author's license information:
+https://www.neogrey.com/font-licenses/
+
+Source: the user's locally installed font, CimeroPro.otf.

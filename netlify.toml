@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  # Git-connected Netlify builds continue only for pushes/merges to main.
+  # Exit 0 skips a build; exit 1 continues it.
+  ignore = "node -e \"process.exit(process.env.BRANCH === 'main' ? 1 : 0)\""
+
+[build.environment]
+  NODE_VERSION = "22"
