@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "node build.mjs --serve",
     "build": "node build.mjs",
-    "preview": "node build.mjs --preview"
+    "preview": "node build.mjs --preview",
+    "images:optimize": "python3 scripts/optimize_images.py",
+    "images:check": "python3 scripts/optimize_images.py --check"
   },
   "engines": {
     "node": ">=22"

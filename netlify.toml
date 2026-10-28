@@ -7,3 +7,15 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Generated image filenames contain their content hash. Keep the manifest and
+# HTML on Netlify's default revalidation policy.
+[[headers]]
+  for = "/static/optimized/:folder/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/static/optimized/:folder/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

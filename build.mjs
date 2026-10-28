@@ -1,4 +1,5 @@
-import { cp, mkdir, readFile, rm, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { cp, mkdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { extname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -6,16 +7,47 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('.', import.meta.url));
 const output = resolve(root, 'dist');
 const entries = ['index.html', 'case01', 'case02', 'case03', 'src', 'static'];
+const pages = ['index.html', 'case01/index.html', 'case02/index.html', 'case03/index.html'];
+const manifestFile = 'static/optimized/manifest.json';
+
+async function imageManifest(directory = root) {
+  return JSON.parse(await readFile(resolve(directory, manifestFile), 'utf8'));
+}
+
+function optimizedHtml(html, manifest) {
+  return html.replace(/\bsrc="(\/static\/[^"\s]+\.png)"/g, (_, source) => {
+    if (source.startsWith('/static/optimized/')) return `src="${source}"`;
+    const image = manifest[source];
+    if (!image) throw new Error(`Missing optimized image: ${source}. Run npm run images:optimize.`);
+    return `src="${image.src}"`;
+  });
+}
+
+async function verifyImages(manifest) {
+  for (const [source, image] of Object.entries(manifest)) {
+    for (const [url, expectedHash] of [[source, image.sourceSha256], [image.src, image.outputSha256]]) {
+      const data = await readFile(resolve(root, `.${url}`));
+      const hash = createHash('sha256').update(data).digest('hex');
+      if (hash !== expectedHash) throw new Error(`Image changed: ${url}. Run npm run images:optimize.`);
+    }
+  }
+}
 
 async function build() {
   // Validate source files before replacing an existing successful build.
   await Promise.all(entries.map((entry) => stat(resolve(root, entry))));
+  const manifest = await imageManifest();
+  await verifyImages(manifest);
+  const htmlPages = await Promise.all(pages.map(async (page) => [
+    page, optimizedHtml(await readFile(resolve(root, page), 'utf8'), manifest),
+  ]));
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   await Promise.all(entries.map((entry) => cp(resolve(root, entry), resolve(output, entry), {
     recursive: true,
     filter: (path) => !path.endsWith('.DS_Store'),
   })));
+  await Promise.all(htmlPages.map(([page, html]) => writeFile(resolve(output, page), html)));
   console.log('Static site built in dist/');
 }
 
@@ -48,7 +80,10 @@ function serve(directory) {
         return;
       }
       if ((await stat(path)).isDirectory()) path = resolve(path, 'index.html');
-      const body = await readFile(path);
+      let body = await readFile(path);
+      if (extname(path) === '.html') {
+        body = Buffer.from(optimizedHtml(body.toString('utf8'), await imageManifest(directory)));
+      }
       response.writeHead(200, {
         'Content-Type': mimeTypes[extname(path)] || 'application/octet-stream',
         'Cache-Control': 'no-store',
