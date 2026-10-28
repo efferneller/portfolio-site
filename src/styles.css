@@ -19,7 +19,7 @@
   --orange-hover: #d84c00;
   --orange-pressed: #8e3200;
   --muted: #737373;
-  --page-gutter: max(40px, calc((100vw - 1170px) / 2));
+  --page-gutter: clamp(40px, calc((100vw - 1170px) / 2), 135px);
   color: #000;
   background: #fff;
   font-family: "Raleway", sans-serif;
@@ -44,8 +44,9 @@ img { display: block; }
 a:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; }
 .text-label { font-size: 16px; font-weight: 600; }
 .period { color: var(--muted); font-weight: 600; }
+.about, .project, .project-overview, .case-study { width: 100%; max-width: 1440px; margin-inline: auto; }
 .portfolio { display: flex; flex-direction: column; gap: 8px; padding-bottom: 200px; }
-.hero { height: 1024px; display: grid; place-content: center; padding-top: 42px; color: #090909; }
+.hero { height: 100vh; height: 100dvh; display: grid; place-content: center; padding-top: 42px; color: #090909; }
 .hero-content { width: 596px; }
 .hero h1, .project-number { font-family: "Cimero Pro", sans-serif; font-size: 140px; line-height: 1; font-weight: 400; text-transform: uppercase; margin-bottom: 0; }
 .hero-meta { display: flex; justify-content: space-between; margin: 24px 9px 0 7px; font-size: 24px; font-weight: 600; }
@@ -105,13 +106,6 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; }
 .case-copy a:not(.case-link) { color: var(--muted); font-weight: 600; text-underline-position: from-font; line-height: 24px; text-box-trim: trim-both; text-box-edge: cap alphabetic; margin-bottom: -.36px; }
 .case-gallery img { width: 100%; height: auto; object-fit: cover; }
 
-@media (min-width: 1441px) {
-  .project { grid-template-columns: calc(50% - 84px) calc(50% + 84px); }
-  .project-intro { padding-right: 30px; }
-  .project-content { max-width: 470px; }
-  .project-cover { height: 1024px; }
-}
-
 @media (min-width: 1024px) and (max-width: 1250px) {
   :root { --page-gutter: 40px; }
   .project-intro { padding-right: 24px; }
@@ -125,7 +119,7 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; }
 @media (max-width: 1023px) {
   :root { --page-gutter: 20px; }
   .portfolio { gap: 0; }
-  .hero { height: 577px; padding: 0; }
+  .hero { padding: 0; }
   .hero-content { width: 273px; }
   .hero h1, .project-number { font-size: 64px; }
   .hero-meta { margin: 12px 0 0; font-size: 16px; }
