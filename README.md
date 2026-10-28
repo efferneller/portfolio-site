@@ -24,9 +24,11 @@ npm run preview
 - `dev` — разработка и проверка изменений.
 - `main` — публикация сайта.
 
-Репозиторий подключается к Netlify через Git. Файл `netlify.toml` задаёт команду `npm run build`, каталог публикации `dist` и Node.js 22. Проверка `build.ignore` пропускает автоматические сборки для веток, отличных от `main`.
+Репозиторий подключён через Git к [проекту Netlify tiny-blancmange-8aaf3e](https://app.netlify.com/projects/tiny-blancmange-8aaf3e/overview). Production branch — `main`, автоматические сборки включены. Файл `netlify.toml` задаёт команду `npm run build`, каталог публикации `dist` и Node.js 22. Проверка `build.ignore` пропускает автоматические сборки для веток, отличных от `main`.
 
-В настройках проекта Netlify должно быть выбрано: **Production branch → main**. Эта настройка хранится в Netlify и не задаётся через `netlify.toml`. Путь к базовому каталогу оставьте пустым, если Netlify подключён к корню этого репозитория. Автопубликация должна быть включена.
+Production branch хранится в Netlify и не задаётся через `netlify.toml`. Базовый каталог — корень репозитория. Адрес сайта после первой успешной публикации: [tiny-blancmange-8aaf3e.netlify.app](https://tiny-blancmange-8aaf3e.netlify.app/).
+
+До первого переноса сайта из `dev` ветка `main` содержит только README, поэтому её начальная сборка завершилась ошибкой. Для первой публикации нужно перенести реализацию в `main`.
 
 После проверки изменений в `dev` перенесите их в `main`:
 
