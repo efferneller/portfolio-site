@@ -1,0 +1,512 @@
+{
+  "/static/case01/neva-image-01.png": {
+    "height": 3772,
+    "outputBytes": 886400,
+    "outputSha256": "267ba03901da5a9c506d75e92df22d432d26819607bd4a35bc12c32de36ab84a",
+    "pixelSha256": "d75c6fc805e875abb9b0c7542bc999552bd46eef71a6f15d8894da1f2b5a4dcb",
+    "sourceBytes": 1450027,
+    "sourceSha256": "118545cc3c4fcb8e4b2aa724571d08a209a760192d7eebf6eb40cae32c0ab65d",
+    "src": "/static/optimized/case01/neva-image-01.267ba03901da.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-02.png": {
+    "height": 2236,
+    "outputBytes": 2391278,
+    "outputSha256": "8cea971c1ed7796e43258c6d5d0c8776ec060fe67aab672ad83be12c7a8381cf",
+    "pixelSha256": "ea9a598724a50b5d4fa0425575acdb3d5d4a02361893d8eb3c183c0fb50d63f9",
+    "sourceBytes": 3622214,
+    "sourceSha256": "b432b0081fcc602a4a7a852f14e8a59d7ad88a3c9c0c0cf84de0cda4b3edb294",
+    "src": "/static/optimized/case01/neva-image-02.8cea971c1ed7.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-03.png": {
+    "height": 4000,
+    "outputBytes": 6453370,
+    "outputSha256": "0ef5cb5f330f5cffc583096348b927a58e192573af4a827b82ba762aad745517",
+    "pixelSha256": "e2af687c49b17545df39218b6835028a5e1283a61de019cafde3965ed471d059",
+    "sourceBytes": 9959085,
+    "sourceSha256": "4b04cffdc538e5f886123cc9a862617268edcafea51ae00c3d44f1701cd9d21a",
+    "src": "/static/optimized/case01/neva-image-03.0ef5cb5f330f.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-04.png": {
+    "height": 3136,
+    "outputBytes": 2021382,
+    "outputSha256": "cd5dc966ecae14a39123124e28ec478274e69fc154db9ab3c2fcf2d9c2f8b209",
+    "pixelSha256": "35696ac14cb636bba17eaef58535898234ff5c6c84528d3ad7a3c19c1c91d0a9",
+    "sourceBytes": 3506131,
+    "sourceSha256": "c5675bde1099aa70fef62035db42108b87e1a6c2fb628dd357bc1476049c9c14",
+    "src": "/static/optimized/case01/neva-image-04.cd5dc966ecae.webp",
+    "width": 3914
+  },
+  "/static/case01/neva-image-05.png": {
+    "height": 3984,
+    "outputBytes": 2801754,
+    "outputSha256": "ebe168f1f58e01a4a3e8ec453fdd8a05699caa7915648d9f73b459ad39c2f1e5",
+    "pixelSha256": "07d6a0c76a0ff0d65971b9c8ffcc0da1045f48f6b5e6ec43fb1de8776f9ed29a",
+    "sourceBytes": 4453982,
+    "sourceSha256": "748f25d8af82e38e00932cfff621fede725accdcb87979250fdf9b5a0c201fa9",
+    "src": "/static/optimized/case01/neva-image-05.ebe168f1f58e.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-06.png": {
+    "height": 4884,
+    "outputBytes": 1887064,
+    "outputSha256": "4e8d358fad2944206ece7aa19c8289e08c7b2af03b4cb480ea316a7c91db2fc3",
+    "pixelSha256": "0d565c9ee42b69d8d0891682aa69d20a91047e6522911032ba003382a0838dad",
+    "sourceBytes": 3065315,
+    "sourceSha256": "ec2bd27a82d3719c17223846ab6b19c0282b029b4d059ea2d556cb238a8af21f",
+    "src": "/static/optimized/case01/neva-image-06.4e8d358fad29.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-07.png": {
+    "height": 4530,
+    "outputBytes": 4183820,
+    "outputSha256": "3788643d154f5dd9cb1593a8be0d61945980b911a6d9b344049f404a4b026bcf",
+    "pixelSha256": "52969695ba6dd7afa257dd5498eb1c33442c0a918745d0704aaac0be1f0116d6",
+    "sourceBytes": 6490222,
+    "sourceSha256": "2c7d185e0dfa9b3ba2c0c641354df276308722730ac2b8c90306cdb9efeb91ac",
+    "src": "/static/optimized/case01/neva-image-07.3788643d154f.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-08.png": {
+    "height": 3776,
+    "outputBytes": 852340,
+    "outputSha256": "c87f720517cd48bb9d6dfddc882ebcb49e83f8e9e03f46e0fcb5aff447439d22",
+    "pixelSha256": "56f2332ed624936ccc713ea0f0f1f3564565dd72cd999d2330fc500089b52175",
+    "sourceBytes": 1535388,
+    "sourceSha256": "70a2d3fa9e8b62146373e8f38d836512400d742c27d5f43c1f6720bd284a081e",
+    "src": "/static/optimized/case01/neva-image-08.c87f720517cd.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-09.png": {
+    "height": 4740,
+    "outputBytes": 1078778,
+    "outputSha256": "f42f11b73cca3f672aeeac8abab026b867f815f2aee6c2038084d3c90df9d2ca",
+    "pixelSha256": "0977e359903e89957d80912a229e8a66800c72824312f530a421420608da7ba5",
+    "sourceBytes": 1875919,
+    "sourceSha256": "32d5864fa6a4922cf21a405c3405b8fd2dce64a582f8d1ebd82c0b895b765bd9",
+    "src": "/static/optimized/case01/neva-image-09.f42f11b73cca.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-10.png": {
+    "height": 3348,
+    "outputBytes": 142058,
+    "outputSha256": "c3feea318f99ad9a6d3ac715a9e3c79072b89efd86399a42ad01ea4eee826277",
+    "pixelSha256": "f0e283f5179bb3f9694c7c2e17252f4f1f00f628d2bd1e96dbff7a0f7097329d",
+    "sourceBytes": 317257,
+    "sourceSha256": "768d08102148504cc33b42a393ab3d08771b8abc3497ab9c06268a629497cff7",
+    "src": "/static/optimized/case01/neva-image-10.c3feea318f99.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-11.png": {
+    "height": 5122,
+    "outputBytes": 1071898,
+    "outputSha256": "1c95bfba104dea145017b78ce6735d95423eaf820bad4d908ae70e285d6b61a8",
+    "pixelSha256": "cf22ea99923ed821026df449a62f6b7d3e873d9134bc359a75a515ec5598499d",
+    "sourceBytes": 1893226,
+    "sourceSha256": "f0f95396e3b8a8ce0a3246a810f96c9b277793313da8f006a22b27400b4cc1ed",
+    "src": "/static/optimized/case01/neva-image-11.1c95bfba104d.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-12.png": {
+    "height": 3494,
+    "outputBytes": 342946,
+    "outputSha256": "8495b358c2197c64f006fef65b120832f22652e83566e24ba71a07fe071105fc",
+    "pixelSha256": "bc44d57f0a52272595c81ac11d373f35650d9a89a1210a698c92b0c6dee03dab",
+    "sourceBytes": 758424,
+    "sourceSha256": "50eae9b2bb131dea1ecb158a07f1b434729f9e880d05b5dc7b0b20bbb9b170a7",
+    "src": "/static/optimized/case01/neva-image-12.8495b358c219.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-13.png": {
+    "height": 2648,
+    "outputBytes": 59672,
+    "outputSha256": "1f4441fc8ed68841c863cc7bb3947ea30c52a0643419921997815e2ffaedb594",
+    "pixelSha256": "12fe75b3d517469277bb234c184e0bd0d6c917f51cfd33cc6f4fefaa5559968e",
+    "sourceBytes": 198854,
+    "sourceSha256": "327707384090d02d148f38c93a65c752d293eb5cfcd25902b41fe79f0baa3cff",
+    "src": "/static/optimized/case01/neva-image-13.1f4441fc8ed6.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-14.png": {
+    "height": 4118,
+    "outputBytes": 370552,
+    "outputSha256": "e6802651dabe11cab034ce0f3b1768b73c10910dd82ae3b3c0d6dd24de43cabd",
+    "pixelSha256": "0343c891af299e1b1c56700a85e21202746c6bc18d6813d087b690db7cb594f0",
+    "sourceBytes": 779914,
+    "sourceSha256": "beeb8bf1c923b3941567a0340afc2727994e1627b1c4b7e0bf3fe494ccbdc248",
+    "src": "/static/optimized/case01/neva-image-14.e6802651dabe.webp",
+    "width": 2800
+  },
+  "/static/case01/neva-image-15.png": {
+    "height": 3616,
+    "outputBytes": 2908444,
+    "outputSha256": "626e087ae5356467d176632563ddeabb15dcbeba2ec1fadda77cbebfdcc10374",
+    "pixelSha256": "3c70c98c436fe8965340759fd7bcbe65fa49a005db6ed5d1889cf24b63626861",
+    "sourceBytes": 4734307,
+    "sourceSha256": "120d090a0e612f2f4ee2b87d23ca9e5d7b083ab03d0edae7c1ce75255f2d82b3",
+    "src": "/static/optimized/case01/neva-image-15.626e087ae535.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-01.png": {
+    "height": 3960,
+    "outputBytes": 2739210,
+    "outputSha256": "b9a08194ff2c8ca2239ac2dbd53fe92cac2d2a10aa4df535e00bfae58309ae92",
+    "pixelSha256": "0673b0ca150a3a1dae15e26dac41885b3ef304722e5e73a245111c8039ce1798",
+    "sourceBytes": 4335647,
+    "sourceSha256": "55b08b1573281b8884ce03fdaa61cc8591d96c8ed5bd533a3bd90ebc623eb96c",
+    "src": "/static/optimized/case02/flower_city-image-01.b9a08194ff2c.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-02.png": {
+    "height": 2518,
+    "outputBytes": 117086,
+    "outputSha256": "04d141d9791639dea36d860b8d07ad3bc9832c8f660eb7560351e9996cfc5c11",
+    "pixelSha256": "d1c19355c0a8b2701b27e37c8a766ce0dd56889a972eb5219b8fc55efe199bb8",
+    "sourceBytes": 340319,
+    "sourceSha256": "9a4760adc93064a279d3b02195e9834ecbeae6bc9ea30fc9f67d63efe7333cd3",
+    "src": "/static/optimized/case02/flower_city-image-02.04d141d97916.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-03.png": {
+    "height": 3061,
+    "outputBytes": 1133836,
+    "outputSha256": "e93c28de70a57c487a16a95681cf699b9b3b2f318d3eb4f86c1f738e27b6f262",
+    "pixelSha256": "34893a16a7e2d36f2f0f8e0ce42be36094da49c6597f8dd9f5b3397d6a9b8648",
+    "sourceBytes": 2017323,
+    "sourceSha256": "c121e76eb1919a7c5cfbfbb01ca199cac98addccbdd1fbb328493d8e8efb6178",
+    "src": "/static/optimized/case02/flower_city-image-03.e93c28de70a5.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-04.png": {
+    "height": 2852,
+    "outputBytes": 1104780,
+    "outputSha256": "0f7c91167ea91c70c8fb2969572dd3dcfbaeeb679730095b6300d07ba321690a",
+    "pixelSha256": "f588c0443f10cac93a93edd3936f5206d28ea34a0c0d9d770a6b5c8794eea806",
+    "sourceBytes": 1988243,
+    "sourceSha256": "614f30452bf6faed26fc67c4e9a71d3d69df94e78a21356b215b865fde86540f",
+    "src": "/static/optimized/case02/flower_city-image-04.0f7c91167ea9.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-05.png": {
+    "height": 3788,
+    "outputBytes": 791918,
+    "outputSha256": "805fd85657e84629ea161bcc44b283d8a87c2762eb7991942f22bdb78592ba61",
+    "pixelSha256": "6617af62fc10dcb85d41e6e79a2baa4d50d57b6ccdd38aff6bdd38957fc640da",
+    "sourceBytes": 1104142,
+    "sourceSha256": "aa49ee1d521d8a079d502d8805b5436505c68f235f99c43460c3cf6b89a8e0d8",
+    "src": "/static/optimized/case02/flower_city-image-05.805fd85657e8.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-06.png": {
+    "height": 3832,
+    "outputBytes": 3633512,
+    "outputSha256": "faaac12f51f3ad6408c7cced85bd32d674c3382cd133d405009a4b9feff91d58",
+    "pixelSha256": "40ac830dbb4d57ef6275b80be60440d8c4a3f37a5d379d87b0cb8604e52e5c6c",
+    "sourceBytes": 6001105,
+    "sourceSha256": "d350ad63f711d954473e644b15d8948bc3714d1d3ce64b9d436550582d75c804",
+    "src": "/static/optimized/case02/flower_city-image-06.faaac12f51f3.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-07.png": {
+    "height": 3960,
+    "outputBytes": 5007926,
+    "outputSha256": "0df9408a2b2900e247453a45f25a91656baec20c9ca022ecdda9d5e8990e5c90",
+    "pixelSha256": "8babb3370c4f33b6594be15e1f9552e08d92cd6717329f85a7e9e986a745463b",
+    "sourceBytes": 8362332,
+    "sourceSha256": "2b16ada3fea0f3766d7500f24ab175773d6f91405050d1c95999559e284c0f63",
+    "src": "/static/optimized/case02/flower_city-image-07.0df9408a2b29.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-08.png": {
+    "height": 2932,
+    "outputBytes": 2954064,
+    "outputSha256": "3ac50f836b029d9b01b345aa3538d7d837c675332f437295a7141c8e96f60d66",
+    "pixelSha256": "99ddd2b5dac3cb99f8bdf395e5def0dddba3fabc8928846b0457f947b0d5d519",
+    "sourceBytes": 5143775,
+    "sourceSha256": "b0caee74a37bace56dbba3c0d1f3196f3e590f4b7f110c743a9119d8135a5198",
+    "src": "/static/optimized/case02/flower_city-image-08.3ac50f836b02.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-09.png": {
+    "height": 2948,
+    "outputBytes": 3464662,
+    "outputSha256": "60d44193707f7620f157afbf23d43346b5e1e4dea404643172e5bdf19c616d1d",
+    "pixelSha256": "778e801c2f9774f3fc137d938480e3e9ed0293452dbedb584019b31178d777ca",
+    "sourceBytes": 5866610,
+    "sourceSha256": "837866c43208cc496a73fd47ac64fcd81d84c7682da0e0f845211b1b35ec0140",
+    "src": "/static/optimized/case02/flower_city-image-09.60d44193707f.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-10.png": {
+    "height": 4918,
+    "outputBytes": 6694104,
+    "outputSha256": "5d364155de6e108284037f30f582b181203e20bc15cb5be0706b0277caf07f31",
+    "pixelSha256": "de847853e7cdc39ae316933c791089b7a42d2b8335790612d0a197d8a42e2533",
+    "sourceBytes": 10519589,
+    "sourceSha256": "bac9cc93ae7abea1166696794be763065e0611380c109802727e5a2f6f4aa81d",
+    "src": "/static/optimized/case02/flower_city-image-10.5d364155de6e.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-11.png": {
+    "height": 2038,
+    "outputBytes": 1095866,
+    "outputSha256": "29fa7e810efd4603792dd2c34feabcc390f58c4e32319abde1e87fbb87455074",
+    "pixelSha256": "d91683be4de7d1bdf0162aeb8bd094a7910edef572dd6e853c7eea64471d5f1a",
+    "sourceBytes": 1806993,
+    "sourceSha256": "fe5f00181255c09642014310deac8500c71b9c9190dceca5cbb9c165efc175d0",
+    "src": "/static/optimized/case02/flower_city-image-11.29fa7e810efd.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-12.png": {
+    "height": 3404,
+    "outputBytes": 1507582,
+    "outputSha256": "349d67b33e4801e547bf90d7c2b509b67936101056fe52950619276f03f41260",
+    "pixelSha256": "440ce2a304e0e8c20070e07b454457411c1f90da046d3cd2ab5847236c667bd6",
+    "sourceBytes": 2621768,
+    "sourceSha256": "0c99de972be1f68d2c72a75fdae670e981558ca6e4238748e7aa1d13d13932de",
+    "src": "/static/optimized/case02/flower_city-image-12.349d67b33e48.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-13.png": {
+    "height": 2112,
+    "outputBytes": 256366,
+    "outputSha256": "ecd95904acc1e7d40c483fa82c75f86f7bf46f66e1eef93dde7d1492e347eedb",
+    "pixelSha256": "0073f898e652cb759ae41af9cf9575fff081b89f9fe87be1bf6b6e0adf776388",
+    "sourceBytes": 485324,
+    "sourceSha256": "fc95a38009a0664b5d237d323ffda1219baa1f5d9d0d7fee089be9950e1915d3",
+    "src": "/static/optimized/case02/flower_city-image-13.ecd95904acc1.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-14.png": {
+    "height": 6000,
+    "outputBytes": 801000,
+    "outputSha256": "2aa8c937e763df37481029e7e00be0115dc01d0530f446e53a09acc7fd338b21",
+    "pixelSha256": "9724bd162e17a355ea94c54777b26a3ef04e2ceb122b24efd1e84f3946b3b84e",
+    "sourceBytes": 1638374,
+    "sourceSha256": "7c6d9173c7de85f97519f6cd329b3f440b658a70e4b9dba197a7b60195cf9cfe",
+    "src": "/static/optimized/case02/flower_city-image-14.2aa8c937e763.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-15.png": {
+    "height": 4032,
+    "outputBytes": 4542600,
+    "outputSha256": "d30c192982b69f5a402bda9e861d9dc3cebbec486e07c0c08c8222ab4a5e1cf5",
+    "pixelSha256": "4b73afd607377ce95fe061890b6475d2af1c3e58b9b94cdfb7639ad7f83c4e7b",
+    "sourceBytes": 7405462,
+    "sourceSha256": "c280e1736413c7b7709fb055bb1b0580dfa8164c1e8f1fb5dfefcc8d03fd5733",
+    "src": "/static/optimized/case02/flower_city-image-15.d30c192982b6.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-16.png": {
+    "height": 3330,
+    "outputBytes": 1734646,
+    "outputSha256": "6bfde2d99b522c6e5e0a24e72c44e019c0b438089d4a86626c93555719a129ff",
+    "pixelSha256": "d527c82326a87368916efe6ff42bca93609d67c35edf71edfeafe6f7fe355e79",
+    "sourceBytes": 3084192,
+    "sourceSha256": "4521aae7b470df9d6c70ca89ddd0f7c3d2bbd049c540f59dad404b8f1fd0166c",
+    "src": "/static/optimized/case02/flower_city-image-16.6bfde2d99b52.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-17.png": {
+    "height": 4000,
+    "outputBytes": 3894650,
+    "outputSha256": "ac148c4120759180ebb4711effc041cbccc617085445c3cb2c995761315693d8",
+    "pixelSha256": "3d74ca48402afe8cb253168cd4e02298756e146916dbf495026ae256860b9b69",
+    "sourceBytes": 6454587,
+    "sourceSha256": "909cd2059d39590e505141cc33e6c0aba19f9267b003afdd074169b717de0a8a",
+    "src": "/static/optimized/case02/flower_city-image-17.ac148c412075.webp",
+    "width": 2800
+  },
+  "/static/case02/flower_city-image-18.png": {
+    "height": 4000,
+    "outputBytes": 3554068,
+    "outputSha256": "4ba425149baa68bb3827db557e34101d024cfae27ed595f6b62c1e6a7b59ae20",
+    "pixelSha256": "906c9a1fa3047b48858a9abfcc418b769b2079a038e4b1ca6f88548211076092",
+    "sourceBytes": 5753931,
+    "sourceSha256": "ccb48998e19356a8a2b2f40c19d970a0a0af4610a019f69c49f52630e000c2a9",
+    "src": "/static/optimized/case02/flower_city-image-18.4ba425149baa.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-01.png": {
+    "height": 4000,
+    "outputBytes": 4478346,
+    "outputSha256": "0ac2b625fd226ce3bb26930d14503d23f1c175e7971c21ee887a4b2a2ac494b2",
+    "pixelSha256": "c969f26bc0afe6e258737c4ff6de7ea8e7c26671800199da3520929bc4646310",
+    "sourceBytes": 7064518,
+    "sourceSha256": "08468c7eb64ec625431154d412085190ebd3c2f055eb94f3b4d251af36ef789e",
+    "src": "/static/optimized/case03/bfs-image-01.0ac2b625fd22.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-02.png": {
+    "height": 4000,
+    "outputBytes": 1689720,
+    "outputSha256": "573c2c103b691010b3ec05bf4a684e6cda1881aa4baa3c030fc5e0b3cdd1f88c",
+    "pixelSha256": "651ec659b7e4df51584aa8e7b6371ef72f66c9533833809ff1bced7e6a46646b",
+    "sourceBytes": 3020330,
+    "sourceSha256": "64d262a7ce2c99af99d3e2190f3a2cceead97578819d3abf44979f35107567a6",
+    "src": "/static/optimized/case03/bfs-image-02.573c2c103b69.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-03.png": {
+    "height": 3696,
+    "outputBytes": 1411672,
+    "outputSha256": "28ec408a36cbe565b339e4a7dc5b89ca290e8a56c90a89c90a82a359d12afaba",
+    "pixelSha256": "a735f60e48055b95839dc07d3aaf719b5a5eb58646fe651cba710724f4329ac0",
+    "sourceBytes": 2411975,
+    "sourceSha256": "68395b6b1288a5fd2bbb017a96db30a82659d609c19089f3fe4f375d38438b40",
+    "src": "/static/optimized/case03/bfs-image-03.28ec408a36cb.webp",
+    "width": 2802
+  },
+  "/static/case03/bfs-image-04.png": {
+    "height": 3520,
+    "outputBytes": 2251266,
+    "outputSha256": "7dc566e76bb4c215cb797b66c0bba8963473ab498e0cc6625178e4eb5d4840db",
+    "pixelSha256": "15fe7824300158d4ab28f3cdec7484350d378b406d63615c0fb1d5400cb232a4",
+    "sourceBytes": 4147472,
+    "sourceSha256": "f96bb2bf8366cc8f3a83652b7980e0cd271efc6a5424bc7f4cfbf33cafac961a",
+    "src": "/static/optimized/case03/bfs-image-04.7dc566e76bb4.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-05.png": {
+    "height": 3012,
+    "outputBytes": 1007612,
+    "outputSha256": "5b6c42e02a884db1b9537b651628a7c8185584efc7a6eae68e3151a00871b7b6",
+    "pixelSha256": "6db0b22679b59ab534d09f32d3f8dbe1bc501b5546a2bbcb04fffed3dbfcf42a",
+    "sourceBytes": 1682453,
+    "sourceSha256": "74d04a7cb2cff130616e21c9910d3757a7dd5598d694b5b44162b99b99ab8b4a",
+    "src": "/static/optimized/case03/bfs-image-05.5b6c42e02a88.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-06.png": {
+    "height": 2920,
+    "outputBytes": 2357252,
+    "outputSha256": "0adac40c1d4536d0b6cb331b297a27741945e232d11876ada176e2d730412752",
+    "pixelSha256": "9d7fe3a5bdc9af81d00b5c6da6745d0676be4251f1df3662e05a988a746f3ce9",
+    "sourceBytes": 4008600,
+    "sourceSha256": "fcca84f377f2923b10b9c0945e5a38bd34b7bbe767cf8e0fcb8933ffeca22821",
+    "src": "/static/optimized/case03/bfs-image-06.0adac40c1d45.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-07.png": {
+    "height": 3920,
+    "outputBytes": 3480256,
+    "outputSha256": "e8a176302e4e3ed75528ac4d46af61489979259ae6f0dfc5158a9556ac080a90",
+    "pixelSha256": "d200f6f7e50637e3f48b394730b1d852a800743000be1126ee544b604683141c",
+    "sourceBytes": 5379619,
+    "sourceSha256": "249d30d600c689801325839ed86e4e3089f810525538a70c4b2f9ecc9cbfd826",
+    "src": "/static/optimized/case03/bfs-image-07.e8a176302e4e.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-08.png": {
+    "height": 3920,
+    "outputBytes": 2887142,
+    "outputSha256": "3f490de0bbfebafc19942680df217ad4286a757e0f314d203e2f79c22832449f",
+    "pixelSha256": "dc38bf0dce89c15a7a6b0b57d2ec20df5f83e1fbd584b411721f059766bb62f2",
+    "sourceBytes": 4614651,
+    "sourceSha256": "1ce9a39d72a177aa050f4141f820fb4d7ba1faa106ab8642c49bb19ce083a23a",
+    "src": "/static/optimized/case03/bfs-image-08.3f490de0bbfe.webp",
+    "width": 2800
+  },
+  "/static/case03/bfs-image-09.png": {
+    "height": 3692,
+    "outputBytes": 2357318,
+    "outputSha256": "48f2d246c9ce0af8d7c891b9ea4e85507c09c22a7fe95f0e1e520d308c8d85b7",
+    "pixelSha256": "aa3922a7342e7b8fa78a0b11a54f194b7562ee3375b7ee08d225235f594865de",
+    "sourceBytes": 3521161,
+    "sourceSha256": "890a4dba230dd066fb566af9b21ff01d8579af5eb4e1f030bfe874561de497d6",
+    "src": "/static/optimized/case03/bfs-image-09.48f2d246c9ce.webp",
+    "width": 2800
+  },
+  "/static/main/main-image-case1-01.png": {
+    "height": 2048,
+    "outputBytes": 592690,
+    "outputSha256": "f1f062f20b2862d970595dc99877bc282d9ab1a9bf71ac1898bf432b29cbec5c",
+    "pixelSha256": "90bdbbe469ef85202f4c6fcfbc1656fff41daadd56e07b871ddb92c115afe328",
+    "sourceBytes": 1093821,
+    "sourceSha256": "32f5d3f6caa8dfcc8e3f1dcdbb1747624e9a6b18656c78b644d92064c21541ad",
+    "src": "/static/optimized/main/main-image-case1-01.f1f062f20b28.webp",
+    "width": 1608
+  },
+  "/static/main/main-image-case1-02.png": {
+    "height": 1536,
+    "outputBytes": 1782714,
+    "outputSha256": "b3d3ca7a995f5a6aa2cca9e7158f74387db16ea889f1abeb2185d59d8bb20f1a",
+    "pixelSha256": "3ee289327b41df142007e167f59f4e1ae0ea301c4cd0d0462659a29974b64cf3",
+    "sourceBytes": 2908981,
+    "sourceSha256": "772cf5ca4568b93bc509a0e2ad610bc1cf0dcf978eca64bafde5ab27c774c6c2",
+    "src": "/static/optimized/main/main-image-case1-02.b3d3ca7a995f.webp",
+    "width": 2880
+  },
+  "/static/main/main-image-case2-01.png": {
+    "height": 2048,
+    "outputBytes": 2248208,
+    "outputSha256": "1ae71a7ec3ab8c567c847ff42c9b54139cd444ce6f8e3c82c29b76d26d499443",
+    "pixelSha256": "5f6ef3f818a9bab87879c998bf40b0e58d9c4678373653012cb380ad2bfeb6e0",
+    "sourceBytes": 3716708,
+    "sourceSha256": "5cf9cb4f0b03c148f8e010cf09752de38c521fba5bc8837a69e9f1c98f78ab18",
+    "src": "/static/optimized/main/main-image-case2-01.1ae71a7ec3ab.webp",
+    "width": 1608
+  },
+  "/static/main/main-image-case2-02.png": {
+    "height": 1536,
+    "outputBytes": 1171168,
+    "outputSha256": "c6edcd06adfa271918d5f67e7c8b426067c3ea779a3c8aa27de3cae3ad9d9d14",
+    "pixelSha256": "be549d933858e96d232053c36c9bff31843cbc1a77f00117e075f88563b0ac51",
+    "sourceBytes": 1964882,
+    "sourceSha256": "758f54f6c188d18027b8525827e2fcc1316a746317774b2365d040fc614c6309",
+    "src": "/static/optimized/main/main-image-case2-02.c6edcd06adfa.webp",
+    "width": 2880
+  },
+  "/static/main/main-image-case3-01.png": {
+    "height": 2048,
+    "outputBytes": 1758896,
+    "outputSha256": "6d9368e3ea808ba3759386510985296695838b461cb0640f54697354a3997851",
+    "pixelSha256": "11e73e3d7ee07e7bb05f35043175be4039ba76ee76d36d4d236b96ea72b2fb86",
+    "sourceBytes": 2659174,
+    "sourceSha256": "18c7800e4f2e11163ba389a63e575f1535fac57906c8b71056eefefa9b9548b1",
+    "src": "/static/optimized/main/main-image-case3-01.6d9368e3ea80.webp",
+    "width": 1608
+  },
+  "/static/main/main-image-case3-03.png": {
+    "height": 1536,
+    "outputBytes": 1465082,
+    "outputSha256": "7de04239d24b46e0db45774eb9ff727d7d3e0b76384d148333b36536cdca0c6d",
+    "pixelSha256": "c2318d5fea30a7445202632ff9de834dbc48827d3d0327c97d96dcddf5bb7dd1",
+    "sourceBytes": 2437210,
+    "sourceSha256": "6fbc227189d31886697e76168e1c039a94f573035561cf79e69906c66a1e1d7e",
+    "src": "/static/optimized/main/main-image-case3-03.7de04239d24b.webp",
+    "width": 2880
+  },
+  "/static/main/main-image-me.png": {
+    "height": 1387,
+    "outputBytes": 1120316,
+    "outputSha256": "afc9d304e6254d59034a3f8c0934cdf98ad65e45f02c712184de03f01c19b077",
+    "pixelSha256": "a23895d73ed68d5cc1584ffe1c5116eb186910970acb900e9ebe4792d2b9f80e",
+    "sourceBytes": 1874605,
+    "sourceSha256": "18dbe3557c31d4ba83e0f028ca7d87ebda62a9807946ff1374ad0f00af4fb046",
+    "src": "/static/optimized/main/main-image-me.afc9d304e625.webp",
+    "width": 1140
+  },
+  "/static/ui/figma.png": {
+    "height": 1440,
+    "outputBytes": 15032,
+    "outputSha256": "2c3b546c5dd211505333145a1d1827d6320f31e8ab9a6491f11e5cc31052ade4",
+    "pixelSha256": "d2e32b51f6d1e643e3d590e46634c597a50d737fee5965f86c4e0d8ffc8a1f20",
+    "sourceBytes": 67160,
+    "sourceSha256": "d7165c36fa78dcecb9e4b20bbb072f65c03ffb3a06ef441567107fd0504c4ebc",
+    "src": "/static/optimized/ui/figma.2c3b546c5dd2.webp",
+    "width": 960
+  },
+  "/static/ui/illustrator.png": {
+    "height": 960,
+    "outputBytes": 8394,
+    "outputSha256": "590a5f36cbdceaab2858901a402a14ee83df73f9595d8fb5a9fab464cd58bd9c",
+    "pixelSha256": "cd10aac58f766c1eeeb7ad4343c7119aca787c76edbb95538448ea269e3024aa",
+    "sourceBytes": 40440,
+    "sourceSha256": "422b19e10d43f07c437377572317c0c2f94e3c651dd77955398f128a7be6aa38",
+    "src": "/static/optimized/ui/illustrator.590a5f36cbdc.webp",
+    "width": 960
+  }
+}
