@@ -1,5 +1,5 @@
-# Merge this block into the hosting's existing root .htaccess once.
-# Automated uploads preserve the remote .htaccess (SSL/host-managed rules).
+# The publisher updates only this managed block in the remote .htaccess.
+# Other hosting rules, including SSL redirects, are preserved.
 # BEGIN portfolio cache
 <IfModule mod_headers.c>
   <FilesMatch "\.(html|css|js|json)$">

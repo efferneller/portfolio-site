@@ -1,5 +1,6 @@
 """Publish the static build over explicit FTPS, with certificate validation."""
 import ftplib
+import io
 import json
 import os
 from pathlib import Path
@@ -38,6 +39,37 @@ def ensure_directory(ftp, root, relative):
             ftp.cwd(part)
 
 
+def merge_cache(existing, configuration):
+    begin, end = b'# BEGIN portfolio cache', b'# END portfolio cache'
+    if configuration.count(begin) != 1 or configuration.count(end) != 1:
+        raise ValueError('Invalid local cache configuration')
+    block = configuration[configuration.index(begin):configuration.index(end) + len(end)]
+    if not existing.count(begin) and not existing.count(end):
+        return existing + (b'\n' if existing and not existing.endswith(b'\n') else b'') + block + b'\n'
+    if existing.count(begin) != 1 or existing.count(end) != 1 or existing.index(begin) > existing.index(end):
+        raise ValueError('Invalid remote cache markers; preserve hosting configuration')
+    return existing[:existing.index(begin)] + block + existing[existing.index(end) + len(end):]
+
+
+def configure_cache(ftp, directory, root):
+    ftp.cwd(root)
+    previous = io.BytesIO()
+    try:
+        ftp.retrbinary('RETR .htaccess', previous.write)
+    except ftplib.error_perm as error:
+        if not str(error).startswith('550'):
+            raise
+        # 550 can also mean unreadable: confirm absence instead of overwriting.
+        if '.htaccess' in [name.rsplit('/', 1)[-1] for name in ftp.nlst()]:
+            raise ValueError('Existing .htaccess is unreadable; refusing to replace it') from error
+    existing = previous.getvalue()
+    updated = merge_cache(existing, (directory / '.htaccess').read_bytes())
+    if updated != existing:
+        ftp.storbinary('STOR .htaccess.deploying', io.BytesIO(updated))
+        ftp.rename('.htaccess.deploying', '.htaccess')
+        print('Updated managed cache block; preserved hosting rules.')
+
+
 def deploy(ftp, directory, root):
     files = build_files(directory)
     # A typo in the root must stop before creating directories or uploading.
@@ -46,7 +78,11 @@ def deploy(ftp, directory, root):
     if not ftp.size('index.html'):
         raise ValueError('Destination must contain the existing site index.html')
     uploaded = skipped = 0
+    cache_configured = False
     for file in files:
+        if file.suffix == '.html' and not cache_configured:
+            configure_cache(ftp, directory, root)
+            cache_configured = True
         relative = file.relative_to(directory)
         ensure_directory(ftp, root, relative.parent)
         # A content hash identifies immutable optimized images. Other files are

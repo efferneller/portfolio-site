@@ -39,6 +39,9 @@ class FakeFTP:
         if self.fail_upload:
             raise OSError('Connection lost')
 
+    def retrbinary(self, command, callback):
+        callback(b'# Hosting rules\nRewriteEngine On\n')
+
     def rename(self, source, target):
         self.renames.append((source, target))
 
@@ -57,6 +60,7 @@ class PublishSafety(unittest.TestCase):
         (self.build / 'static/optimized/manifest.json').write_text(json.dumps({
             '/static/case01/original.png': {'src': '/static/optimized/case01/image.123456abcdef.webp'}
         }))
+        (self.build / '.htaccess').write_bytes(b'# BEGIN portfolio cache\nCache rules\n# END portfolio cache\n')
 
     def publish(self, ftp):
         with contextlib.redirect_stdout(io.StringIO()):
@@ -66,7 +70,9 @@ class PublishSafety(unittest.TestCase):
         ftp = FakeFTP()
         self.publish(ftp)
         names = [target for _, target in ftp.renames]
-        self.assertNotIn('.htaccess', names)
+        self.assertEqual(names.count('.htaccess'), 1)
+        config = next(data for _, command, data in ftp.uploads if command == 'STOR .htaccess.deploying')
+        self.assertTrue(config.startswith(b'# Hosting rules\nRewriteEngine On\n'))
         self.assertNotIn('original.png', names)
         self.assertNotIn('image.123456abcdef.webp', names)
         self.assertIn('main.js', names)  # Same-size mutable files still update.
@@ -103,6 +109,17 @@ class PublishSafety(unittest.TestCase):
             with self.assertRaises(publisher.ssl.SSLError):
                 publisher.main()
             ftp.login.assert_not_called()
+
+    def test_cache_update_preserves_host_rules_and_is_idempotent(self):
+        old = b'RewriteEngine On\n# BEGIN portfolio cache\nold\n# END portfolio cache\nSSL rules\n'
+        config = b'# BEGIN portfolio cache\nnew\n# END portfolio cache\n'
+        updated = publisher.merge_cache(old, config)
+        self.assertEqual(updated, b'RewriteEngine On\n' + config + b'SSL rules\n')
+        self.assertEqual(publisher.merge_cache(updated, config), updated)
+
+    def test_incomplete_cache_markers_are_not_overwritten(self):
+        with self.assertRaises(ValueError):
+            publisher.merge_cache(b'# BEGIN portfolio cache\ncustom', (self.build / '.htaccess').read_bytes())
 
 
 if __name__ == '__main__':
