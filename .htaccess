@@ -1,0 +1,12 @@
+# Merge this block into the hosting's existing root .htaccess once.
+# Automated uploads preserve the remote .htaccess (SSL/host-managed rules).
+# BEGIN portfolio cache
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.[0-9a-f]{12}\.(webp|png)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+# END portfolio cache

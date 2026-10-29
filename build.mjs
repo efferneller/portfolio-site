@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('.', import.meta.url));
 const output = resolve(root, 'dist');
-const entries = ['index.html', 'case01', 'case02', 'case03', 'src', 'static'];
+const entries = ['index.html', 'case01', 'case02', 'case03', 'src', 'static', '.htaccess'];
 const pages = ['index.html', 'case01/index.html', 'case02/index.html', 'case03/index.html'];
 const manifestFile = 'static/optimized/manifest.json';
 
