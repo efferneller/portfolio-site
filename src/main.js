@@ -40,7 +40,14 @@ if (document.body.classList.contains('home-page')) {
     window.removeEventListener('scroll', dismissHint);
 
     const startY = window.scrollY;
-    const endY = startY + target.getBoundingClientRect().top;
+    let endY = startY + target.getBoundingClientRect().top;
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      const content = [...target.children].map((element) => element.getBoundingClientRect());
+      const top = Math.min(...content.map((rect) => rect.top));
+      const bottom = Math.max(...content.map((rect) => rect.bottom));
+      endY = startY + (top + bottom) / 2 - window.innerHeight / 2;
+    }
+    endY = Math.max(0, Math.min(endY, document.documentElement.scrollHeight - window.innerHeight));
     history.pushState(null, '', scrollHint.hash);
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       window.scrollTo({ top: endY, behavior: 'instant' });
