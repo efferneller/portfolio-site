@@ -46,13 +46,26 @@ a:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; }
 .period { color: var(--muted); font-weight: 600; }
 .about, .project, .project-overview, .case-study { width: 100%; max-width: 1440px; margin-inline: auto; }
 .portfolio { display: flex; flex-direction: column; gap: 8px; padding-bottom: 200px; }
-.hero { height: 100vh; height: 100dvh; display: grid; place-content: center; padding-top: 42px; color: #090909; }
+.hero { position: relative; height: 100vh; height: 100dvh; display: grid; place-content: center; padding-top: 42px; color: #090909; }
 .hero-content { width: 596px; }
 .hero h1, .project-number { font-family: "Cimero Pro", sans-serif; font-size: 140px; line-height: 1; font-weight: 400; text-transform: uppercase; margin-bottom: 0; }
 .hero-meta { display: flex; justify-content: space-between; margin: 24px 9px 0 7px; font-size: 24px; font-weight: 600; }
 .hero-meta p { line-height: 32px; margin-bottom: -.04px; }
 .year { color: var(--orange); }
+.hero-scroll { position: absolute; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); display: grid; place-items: center; width: 48px; height: 56px; color: var(--orange); -webkit-tap-highlight-color: transparent; }
+.hero-scroll[hidden] { display: none; }
+.hero-scroll__arrow { width: 44px; height: 15px; background-color: currentColor; transform: rotate(90deg); -webkit-mask: url("/static/ui/arrow.svg") center / 100% 100% no-repeat; mask: url("/static/ui/arrow.svg") center / 100% 100% no-repeat; }
+.hero-scroll:not([hidden]) .hero-scroll__arrow { animation: scroll-hint 1.8s ease-in-out infinite; }
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(-3px) rotate(90deg); opacity: .45; }
+  50% { transform: translateY(4px) rotate(90deg); opacity: 1; }
+}
+@media (hover: hover) {
+  .hero-scroll:hover { color: var(--orange-hover); }
+}
+.hero-scroll:active { color: var(--orange-pressed); }
 .about { height: 1024px; display: grid; grid-template-columns: repeat(2, minmax(0, 570px)); gap: 30px; align-items: center; padding: 0 var(--page-gutter); }
+.about:focus { outline: none; }
 .portrait { width: 100%; height: auto; }
 .about-copy { display: flex; flex-direction: column; gap: 80px; transform: translateY(7.5px); }
 .biography { display: flex; flex-direction: column; gap: 56px; }
@@ -234,4 +247,5 @@ html.is-loading, html.is-loading body { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   .page-loader__track > span { transition: none; }
+  .hero-scroll:not([hidden]) .hero-scroll__arrow { animation: none; }
 }
