@@ -23,4 +23,19 @@ if (document.body.classList.contains('home-page')) {
       sessionStorage.removeItem('portfolio-return');
     });
   }
+
+  const scrollHint = document.querySelector('.hero-scroll');
+  pageReady.then(() => {
+    // Let anchor/history restoration settle before showing a hint at the top.
+    requestAnimationFrame(() => {
+      if (!scrollHint || window.scrollY > 24) return;
+      scrollHint.hidden = false;
+      const dismissHint = () => {
+        if (window.scrollY <= 24) return;
+        scrollHint.hidden = true;
+        window.removeEventListener('scroll', dismissHint);
+      };
+      window.addEventListener('scroll', dismissHint, { passive: true });
+    });
+  });
 }
