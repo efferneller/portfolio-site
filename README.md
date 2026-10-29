@@ -71,11 +71,12 @@ Python-зависимостей нет.
    `Cache-Control: no-cache`, изображения с хешами — годовой `immutable` кеш.
    Если статику отдаёт nginx в обход Apache, кеширование нужно задать также
    средствами панели REG.RU и повторить проверку заголовков.
-5. После успешной проверки REG.RU отключить сборки Netlify:
+5. `netlify.toml` уже пропускает все Git-сборки Netlify (`ignore = "exit 0"`).
+   После успешной проверки REG.RU можно также отключить сборки в панели:
    **Project configuration → Developer settings → Continuous deployment →
    Build settings → Configure → Stopped builds**.
-   Файл `netlify.toml` оставлен до завершения перехода; изменение файлов Git
-   само по себе не отключает Git-интеграцию Netlify.
+   Это дополнительно отключает ручные сборки и build hooks. Git-интеграция
+   Netlify пока остаётся привязанной; обычные push/merge публикацию не запускают.
 
 ### Поведение загрузки
 
