@@ -23,6 +23,25 @@ function optimizedHtml(html, manifest) {
   });
 }
 
+async function applicationAssets() {
+  const files = new Map();
+  const urls = new Map();
+  function add(name, content) {
+    const extension = extname(name);
+    const hash = createHash('sha256').update(content).digest('hex').slice(0, 12);
+    const filename = `${name.slice(0, -extension.length)}.${hash}${extension}`;
+    files.set(`src/${filename}`, content);
+    urls.set(`/src/${name}`, `/src/${filename}`);
+    return filename;
+  }
+  add('styles.css', await readFile(resolve(root, 'src/styles.css')));
+  const loader = add('page-loader.js', await readFile(resolve(root, 'src/page-loader.js')));
+  const main = (await readFile(resolve(root, 'src/main.js'), 'utf8'))
+    .replaceAll('./page-loader.js', `./${loader}`);
+  add('main.js', main);
+  return { files, urls };
+}
+
 async function verifyImages(manifest) {
   for (const [source, image] of Object.entries(manifest)) {
     for (const [url, expectedHash] of [[source, image.sourceSha256], [image.src, image.outputSha256]]) {
@@ -38,8 +57,12 @@ async function build() {
   await Promise.all(entries.map((entry) => stat(resolve(root, entry))));
   const manifest = await imageManifest();
   await verifyImages(manifest);
+  const assets = await applicationAssets();
   const htmlPages = await Promise.all(pages.map(async (page) => [
-    page, optimizedHtml(await readFile(resolve(root, page), 'utf8'), manifest),
+    page, [...assets.urls].reduce(
+      (html, [before, after]) => html.replaceAll(`"${before}"`, `"${after}"`),
+      optimizedHtml(await readFile(resolve(root, page), 'utf8'), manifest),
+    ),
   ]));
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
@@ -47,6 +70,7 @@ async function build() {
     recursive: true,
     filter: (path) => !path.endsWith('.DS_Store'),
   })));
+  await Promise.all([...assets.files].map(([file, content]) => writeFile(resolve(output, file), content)));
   await Promise.all(htmlPages.map(([page, html]) => writeFile(resolve(output, page), html)));
   console.log('Static site built in dist/');
 }

@@ -27,7 +27,9 @@ jobs:
       - name: Build static site
         run: npm run build
       - name: Check publication safety
-        run: python3 -m unittest discover -s tests
+        run: |
+          node --test tests/build-assets.test.mjs
+          python3 -m unittest discover -s tests
       - name: Upload assets, then pages
         env:
           REG_FTP_HOST: server26.hosting.reg.ru
